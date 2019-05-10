@@ -32,11 +32,18 @@
                             <outlet property="delegate" destination="CQX-vJ-XgV" id="7tl-cn-fMc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TimeHip" id="aa5-Yk-7gh"/>
+                    <navigationItem key="navigationItem" title="TimeHip" id="aa5-Yk-7gh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tbs-iC-Yqd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="CQX-vJ-XgV" id="aka-Oc-kiO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tB-2M-0xU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786.4000000000001" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1135" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OiX-ry-YCc">
