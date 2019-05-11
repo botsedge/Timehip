@@ -11,11 +11,13 @@ import UIKit
 class TimeHipViewController: UITableViewController {
     
     var itemArray = ["Example entry one", "Example entry 2"]
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-  
+        if let items = defaults.array(forKey: "ListArray") as? [String] {
+            itemArray = items
+        }
     }
 
     //Tableview Datasource Methods
@@ -54,6 +56,7 @@ class TimeHipViewController: UITableViewController {
         
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             self.itemArray.append(textField.text!)
+            self.defaults.set(self.itemArray, forKey: "ListArray")
             self.tableView.reloadData()
         }
         alert.addTextField { (alertTextField) in
